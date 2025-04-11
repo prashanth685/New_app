@@ -1,9 +1,12 @@
-import React from 'react'
+// src/App.jsx
+import SignupForm from './SignupForm';
 
-const App = () => {
+function App() {
   return (
-    <div>Hello world</div>
-  )
+    <div style={{ padding: '2rem' }}>
+      <SignupForm />
+    </div>
+  );
 }
 
-export default App
+export default App;
