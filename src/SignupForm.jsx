@@ -1,5 +1,6 @@
 // src/SignupForm.jsx
 import { useState } from 'react';
+import './SignupForm.css'; // Import the CSS file
 
 export default function SignupForm() {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ export default function SignupForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: 'auto' }}>
+    <form className="signup-form" onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
       <input
         type="text"
@@ -28,7 +29,6 @@ export default function SignupForm() {
         value={formData.name}
         onChange={handleChange}
         required
-        style={{ display: 'block', marginBottom: '10px', width: '100%' }}
       />
       <input
         type="email"
@@ -37,7 +37,6 @@ export default function SignupForm() {
         value={formData.email}
         onChange={handleChange}
         required
-        style={{ display: 'block', marginBottom: '10px', width: '100%' }}
       />
       <input
         type="password"
@@ -46,9 +45,8 @@ export default function SignupForm() {
         value={formData.password}
         onChange={handleChange}
         required
-        style={{ display: 'block', marginBottom: '10px', width: '100%' }}
       />
-      <button type="submit" style={{ width: '100%' }}>Sign Up</button>
+      <button type="submit">Sign Up</button>
     </form>
   );
 }
